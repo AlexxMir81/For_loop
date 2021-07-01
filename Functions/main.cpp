@@ -26,8 +26,8 @@ short Sum(short arr[], const int n);
 double Avg(int arr[], const int n);
 double Avg(double arr[], const int n);
 float Avg(float arr[], const int n);
-char Avg(char arr[], const int n);
-short Avg(short arr[], const int n);
+double Avg(char arr[], const int n);
+double Avg(short arr[], const int n);
 int minValuein(int arr[], const int n);
 double minValuein(double arr[], const int n);
 float minValuein(float arr[], const int n);
@@ -261,13 +261,13 @@ float Avg(float arr[], const int n)
 {
 	return (float)Sum(arr, n) / n;
 }
-char Avg(char arr[], const int n)
+double Avg(char arr[], const int n)
 {
-	return (char)Sum(arr, n) / n;
+	return (double)Sum(arr, n) / n;
 }
-short Avg(short arr[], const int n)
+double Avg(short arr[], const int n)
 {
-	return (short)Sum(arr, n) / n;
+	return (double)Sum(arr, n) / n;
 }
 
 int minValuein(int arr[], const int n)
