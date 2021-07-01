@@ -44,7 +44,6 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	const int n = 5;
 	int arr[n];
-	//	cout << "Введите значения " << n << " элементов массива: " << endl;
 	FillRand(arr, n);
 	cout << "int array" << endl;
 	Print(arr, n);
@@ -118,7 +117,7 @@ void FillRand(char arr[], const int n)
 void FillRand(short arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
-		arr[i] = short(rand()%100);
+		arr[i] = short(rand() % 100);
 }
 
 void Print(int arr[], const int n)
