@@ -1,9 +1,9 @@
-#pragma once
+п»ї#pragma once
 #include<iostream>
 using namespace std;
 
 #define tab "\t"
 
-extern int g_a; //глобальная переменная, ее видят все функции, ее может изменить любая функция
+extern int g_a; //РіР»РѕР±Р°Р»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ, РµРµ РІРёРґСЏС‚ РІСЃРµ С„СѓРЅРєС†РёРё, РµРµ РјРѕР¶РµС‚ РёР·РјРµРЅРёС‚СЊ Р»СЋР±Р°СЏ С„СѓРЅРєС†РёСЏ
 const int ROWS = 5;
 const int COLS = 8;
