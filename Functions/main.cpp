@@ -3,36 +3,49 @@ using namespace std;
 
 #define tab "\t"
 
+int g_a; //глобальная переменная, ее видят все функции, ее может изменить любая функция
+const int ROWS = 5;
+const int COLS = 8;
+
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(float arr[], const int n);
 void FillRand(char arr[], const int n);
 void FillRand(short arr[], const int n);
+
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
+
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(float arr[], const int n);
 void Print(char arr[], const int n);
 void Print(short arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
+
 void PrintReverse(int arr[], const int n);
 void PrintReverse(double arr[], const int n);
 void PrintReverse(float arr[], const int n);
 void PrintReverse(char arr[], const int n);
 void PrintReverse(short arr[], const int n);
+
 int Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
 float Sum(float arr[], const int n);
 char Sum(char arr[], const int n);
 short Sum(short arr[], const int n);
+
 double Avg(int arr[], const int n);
 double Avg(double arr[], const int n);
 float Avg(float arr[], const int n);
 double Avg(char arr[], const int n);
 double Avg(short arr[], const int n);
+
 int minValuein(int arr[], const int n);
 double minValuein(double arr[], const int n);
 float minValuein(float arr[], const int n);
 char minValuein(char arr[], const int n);
 short minValuein(short arr[], const int n);
+
 int maxValuein(int arr[], const int n);
 double maxValuein(double arr[], const int n);
 float maxValuein(float arr[], const int n);
@@ -61,7 +74,7 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(d_arr, n) << endl;
 	cout << "Среднее Среднее арифметическое: " << Avg(d_arr, n) << endl;
 	cout << "Минимальное значение из массива: " << minValuein(d_arr, n) << endl;
-	cout << "Минимальное значение из массива: " << maxValuein(d_arr, n) << endl << endl;
+	cout << "Максимальное значение из массива: " << maxValuein(d_arr, n) << endl << endl;
 	
 	float f_arr[n]; //float array
 	FillRand(f_arr, n);
@@ -71,7 +84,7 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(f_arr, n) << endl;
 	cout << "Среднее Среднее арифметическое: " << Avg(f_arr, n) << endl;
 	cout << "Минимальное значение из массива: " << minValuein(f_arr, n) << endl;
-	cout << "Минимальное значение из массива: " << maxValuein(f_arr, n) << endl << endl;
+	cout << "Максимальное значение из массива: " << maxValuein(f_arr, n) << endl << endl;
 
 	char ch_arr[n]; //char array
 	FillRand(ch_arr, n);
@@ -81,7 +94,7 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(ch_arr, n) << endl;
 	cout << "Среднее Среднее арифметическое: " << Avg(ch_arr, n) << endl;
 	cout << "Минимальное значение из массива: " << minValuein(ch_arr, n) << endl;
-	cout << "Минимальное значение из массива: " << maxValuein(ch_arr, n) << endl << endl;
+	cout << "Максимальное значение из массива: " << maxValuein(ch_arr, n) << endl << endl;
 
 	short sh_arr[n]; //short array
 	FillRand(sh_arr, n);
@@ -91,7 +104,13 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(sh_arr, n) << endl;
 	cout << "Среднее Среднее арифметическое: " << Avg(sh_arr, n) << endl;
 	cout << "Минимальное значение из массива: " << minValuein(sh_arr, n) << endl;
-	cout << "Минимальное значение из массива: " << maxValuein(sh_arr, n) << endl << endl;
+	cout << "Максимальное значение из массива: " << maxValuein(sh_arr, n) << endl << endl;
+
+	cout << "=====================2D ARRAYS===============================" << endl;
+
+	int i_arr_2[ROWS][COLS];
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
 }
 
 void FillRand(int arr[], const int n)
@@ -118,6 +137,17 @@ void FillRand(short arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 		arr[i] = short(rand() % 100);
+}
+
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
+	}
 }
 
 void Print(int arr[], const int n)
@@ -200,6 +230,18 @@ void PrintReverse(short arr[], const int n)
 		cout << arr[i] << tab;
 	}
 	cout << endl;
+}
+
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS) 
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << tab;
+		}
+		cout << endl;
+	}
 }
 
 int Sum(int arr[], const int n)
