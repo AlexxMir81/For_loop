@@ -113,6 +113,7 @@ void main()
 	FillRand(c_arr_2, ROWS, COLS);
 	FillRand(s_arr_2, ROWS, COLS);
 
+	cout << "2D Arrays int" << endl;
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов двумерного массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
@@ -120,6 +121,7 @@ void main()
 	cout << "Минимальное значение из двумерного массива: " << minValuein(i_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение из двумерного массива: " << maxValuein(i_arr_2, ROWS, COLS) << endl << endl;
 
+	cout << "2D Arrays double" << endl;
 	Sort(d_arr_2, ROWS, COLS);
 	Print(d_arr_2, ROWS, COLS);
 	cout << "Сумма элементов двумерного массива: " << Sum(d_arr_2, ROWS, COLS) << endl;
@@ -127,6 +129,7 @@ void main()
 	cout << "Минимальное значение из двумерного массива: " << minValuein(d_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение из двумерного массива: " << maxValuein(d_arr_2, ROWS, COLS) << endl << endl;
 
+	cout << "2D Arrays float" << endl;
 	Sort(f_arr_2, ROWS, COLS);
 	Print(f_arr_2, ROWS, COLS);
 	cout << "Сумма элементов двумерного массива: " << Sum(f_arr_2, ROWS, COLS) << endl;
@@ -134,6 +137,7 @@ void main()
 	cout << "Минимальное значение из двумерного массива: " << minValuein(f_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение из двумерного массива: " << maxValuein(f_arr_2, ROWS, COLS) << endl << endl;
 	
+	cout << "2D Arrays char" << endl;
 	Sort(c_arr_2, ROWS, COLS);
 	Print(c_arr_2, ROWS, COLS);
 	cout << "Сумма элементов двумерного массива: " << Sum(c_arr_2, ROWS, COLS) << endl;
@@ -141,6 +145,7 @@ void main()
 	cout << "Минимальное значение из двумерного массива: " << minValuein(c_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение из двумерного массива: " << maxValuein(c_arr_2, ROWS, COLS) << endl << endl;
 	
+	cout << "2D Arrays short" << endl;
 	Sort(s_arr_2, ROWS, COLS);
 	Print(s_arr_2, ROWS, COLS);
 	cout << "Сумма элементов двумерного массива: " << Sum(s_arr_2, ROWS, COLS) << endl;
