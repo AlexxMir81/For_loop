@@ -33,7 +33,7 @@ void main()
 	char str[n];
 	cout << "Введите строку: "; 
 	//cin >> str;
-	/*cin.getline(str, n);
+	cin.getline(str, n);
 	to_upper(str);
 	cout << str << endl;
 	
@@ -53,12 +53,13 @@ void main()
 	cout << "Введите двочиное число: "; cin >> str;
 	cout << bin2dec(str) << endl;
 	
-	cout << "Введите HEX-число: "; cin >> str;
-	cout << hex2dec(str) << endl;*/
+	cout << "Введите hex-число: "; cin >> str;
+	cout << hex2dec(str) << endl;
+
 	int dec;
-	cout << "Введите 10-число: "; cin >> dec;
+	cout << "Конверт в bin, введите dec-число, : "; cin >> dec;
 	dec2bin(dec);
-	cout << "Введите 10-число: "; cin >> dec;
+	cout << "Конверт в hex, введите dec-число: "; cin >> dec;
 	dec2hex(dec);
 
 
