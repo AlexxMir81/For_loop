@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<windows.h>
 using namespace std;
 
@@ -31,7 +31,7 @@ void main()
 	//cout << str << endl;
 	const int n = 20;
 	char str[n];
-	cout << "Введите строку: "; 
+	cout << "Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ: "; 
 	//cin >> str;
 	cin.getline(str, n);
 	to_upper(str);
@@ -43,23 +43,23 @@ void main()
 	shrink(str);
 	cout << str << endl;
 
-	cout << ((is_palindrome(str)==true)?"Это палиндром":"Это не палиндром") << endl;;
+	cout << ((is_palindrome(str)==true)?"Р­С‚Рѕ РїР°Р»РёРЅРґСЂРѕРј":"Р­С‚Рѕ РЅРµ РїР°Р»РёРЅРґСЂРѕРј") << endl;;
 
-	cout << "Введите число: "; cin >> str;
-	cout << ((is_integer(str)==true)?"Это целое число":"Это не целое число") << endl;;
-	cout << ((is_bin(str)==true)?"Это двоичное число":"Это не двоичное число") << endl;;
-	cout << ((is_hex(str)==true)?"Это шестнадцатеричное число":"Это не шестнадцатеричное число") << endl;;
+	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: "; cin >> str;
+	cout << ((is_integer(str)==true)?"Р­С‚Рѕ С†РµР»РѕРµ С‡РёСЃР»Рѕ":"Р­С‚Рѕ РЅРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ") << endl;;
+	cout << ((is_bin(str)==true)?"Р­С‚Рѕ РґРІРѕРёС‡РЅРѕРµ С‡РёСЃР»Рѕ":"Р­С‚Рѕ РЅРµ РґРІРѕРёС‡РЅРѕРµ С‡РёСЃР»Рѕ") << endl;;
+	cout << ((is_hex(str)==true)?"Р­С‚Рѕ С€РµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅРѕРµ С‡РёСЃР»Рѕ":"Р­С‚Рѕ РЅРµ С€РµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅРѕРµ С‡РёСЃР»Рѕ") << endl;;
 
-	cout << "Введите двочиное число: "; cin >> str;
+	cout << "Р’РІРµРґРёС‚Рµ РґРІРѕС‡РёРЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> str;
 	cout << bin2dec(str) << endl;
 	
-	cout << "Введите hex-число: "; cin >> str;
+	cout << "Р’РІРµРґРёС‚Рµ hex-С‡РёСЃР»Рѕ: "; cin >> str;
 	cout << hex2dec(str) << endl;
 
 	int dec;
-	cout << "Конверт в bin, введите dec-число, : "; cin >> dec;
+	cout << "РљРѕРЅРІРµСЂС‚ РІ bin, РІРІРµРґРёС‚Рµ dec-С‡РёСЃР»Рѕ, : "; cin >> dec;
 	dec2bin(dec);
-	cout << "Конверт в hex, введите dec-число: "; cin >> dec;
+	cout << "РљРѕРЅРІРµСЂС‚ РІ hex, РІРІРµРґРёС‚Рµ dec-С‡РёСЃР»Рѕ: "; cin >> dec;
 	dec2hex(dec);
 
 
@@ -78,8 +78,8 @@ int string_length(char str[])
 void to_upper(char str[])
 {
 	const int n = 60;
-	char lower[n]="abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-	char upper[n]="ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+	char lower[n]="abcdefghijklmnopqrstuvwxyzР°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ";
+	char upper[n]="ABCDEFGHIJKLMNOPQRSTUVWXYZРђР‘Р’Р“Р”Р•РЃР–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ";
 
 	for(int i=0; i<string_length(str); i++)
 		for (int j = 0; j < n; j++)
@@ -91,8 +91,8 @@ void to_upper(char str[])
 void to_lower(char str[])
 {
 	const int n = 60;
-	char lower[n] = "abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-	char upper[n] = "ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+	char lower[n] = "abcdefghijklmnopqrstuvwxyzР°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ";
+	char upper[n] = "ABCDEFGHIJKLMNOPQRSTUVWXYZРђР‘Р’Р“Р”Р•РЃР–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ";
 
 	for(int i=0; i<string_length(str); i++)
 		for (int j = 0; j < n; j++)
