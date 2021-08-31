@@ -1,14 +1,14 @@
 #include<iostream>
 using namespace std;
 
-void Print(int arr[], const int n);
+template<typename T>void Print(T arr[], const int n);
 void FillRand(int arr[], const int n);
-int* push_back(int arr[], const int n, int back);
-int* push_front(int arr[], const int n, int front);
-int* insert(int arr[],const int n, int index, int value);
-int* pop_back(int arr[], const int n);
-int* pop_front(int arr[], const int n);
-int* erase(int arr[], const int n, int index);
+template<typename T>T* push_back(T arr[], const int n, int back);
+template<typename T>T* push_front(T arr[], const int n, int front);
+template<typename T>T* insert(T arr[],const int n, int index, int value);
+template<typename T>T* pop_back(T arr[], const int n);
+template<typename T>T* pop_front(T arr[], const int n);
+template<typename T>T* erase(T arr[], const int n, int index);
 
 
 void main()
@@ -57,7 +57,7 @@ void FillRand(int arr[], const int n)
 	}
 }
 
-void Print(int arr[], const int n)
+template<typename T>void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -66,7 +66,7 @@ void Print(int arr[], const int n)
 	cout << endl;
 }
 
-int* push_back(int arr[],const int n, int back)
+template<typename T>T* push_back(T arr[],const int n, int back)
 {
 	int* arr2 = new int[n+1];
 	for (int i = 0; i < n; i++)
@@ -78,7 +78,7 @@ int* push_back(int arr[],const int n, int back)
 	return arr2;
 }
 
-int* push_front(int arr[],const int n, int front)
+template<typename T>T* push_front(T arr[],const int n, int front)
 {
 	int* arr2 = new int[n+1];
 	for (int i=0; i < n; i++)
@@ -90,7 +90,7 @@ int* push_front(int arr[],const int n, int front)
 	return arr2;
 }
 
-int* insert(int arr[], int n, const int index, int value)
+template<typename T>T* insert(T arr[], int n, const int index, int value)
 {
 	int* arr2 = new int[n + 1];
 	if (n > index)
@@ -113,7 +113,7 @@ int* insert(int arr[], int n, const int index, int value)
 	return arr2;
 }
 
-int* pop_back(int arr[], const int n)
+template<typename T>T* pop_back(T arr[], const int n)
 {
 	int* arr2 = new int[n - 1];
 	for (int i = 0; i < n-1; i++)
@@ -124,7 +124,7 @@ int* pop_back(int arr[], const int n)
 	return arr2;
 }
 
-int* pop_front(int arr[], const int n)
+template<typename T>T* pop_front(T arr[], const int n)
 {
 	int* arr2 = new int[n-1];
 	for (int i = 1; i < n; i++)
@@ -135,7 +135,7 @@ int* pop_front(int arr[], const int n)
 	return arr2;
 }
 
-int* erase(int arr[], const int n, int index)
+template<typename T>T* erase(T arr[], const int n, int index)
 {
 	int* arr2 = new int[n-1];
 	if (n > index)
