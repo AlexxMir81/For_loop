@@ -108,6 +108,7 @@ template<typename T>T* insert(T arr[], int n, const int index, int value)
 	else
 	{
 		cout << "Некорректное значение индекса!" << endl;
+		delete[] arr2;
 	}
 	delete[] arr;
 	return arr2;
@@ -152,6 +153,7 @@ template<typename T>T* erase(T arr[], const int n, int index)
 	else 
 	{
 		cout << "Некорректное значение индекса!" << endl;
+		delete[] arr2;
 	}
 	delete[] arr;
 	return arr2;
