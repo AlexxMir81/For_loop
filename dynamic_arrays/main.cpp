@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 template<typename T>void Print(T arr[], const int n);
@@ -15,7 +15,7 @@ void main()
 {
 	setlocale(LC_ALL, "Russian");
 	int n;
-	cout << "Ââåäèòå êîëèåñòâî ýëåìåíòîâ ìàññèâà:"; cin >> n;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:"; cin >> n;
 	int* arr = new int[n] {};
 
 	FillRand(arr, n);
@@ -107,7 +107,7 @@ template<typename T>T* insert(T arr[], int n, const int index, int value)
 	}
 	else
 	{
-		cout << "Íåêîððåêòíîå çíà÷åíèå èíäåêñà!" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð´ÐµÐºÑÐ°!" << endl;
 	}
 	delete[] arr;
 	return arr2;
@@ -151,7 +151,7 @@ template<typename T>T* erase(T arr[], const int n, int index)
 	}
 	else 
 	{
-		cout << "Íåêîððåêòíîå çíà÷åíèå èíäåêñà!" << endl;
+		cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸Ð½Ð´ÐµÐºÑÐ°!" << endl;
 	}
 	delete[] arr;
 	return arr2;
