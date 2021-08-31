@@ -68,7 +68,7 @@ template<typename T>void Print(T arr[], const int n)
 
 template<typename T>T* push_back(T arr[],const int n, int back)
 {
-	int* arr2 = new int[n+1];
+	T* arr2 = new T[n+1];
 	for (int i = 0; i < n; i++)
 	{
 		arr2[i] = arr[i];
@@ -80,7 +80,7 @@ template<typename T>T* push_back(T arr[],const int n, int back)
 
 template<typename T>T* push_front(T arr[],const int n, int front)
 {
-	int* arr2 = new int[n+1];
+	T* arr2 = new T[n+1];
 	for (int i=0; i < n; i++)
 	{
 		arr2[i + 1] = arr[i];
@@ -92,7 +92,7 @@ template<typename T>T* push_front(T arr[],const int n, int front)
 
 template<typename T>T* insert(T arr[], int n, const int index, int value)
 {
-	int* arr2 = new int[n + 1];
+	T* arr2 = new T[n + 1];
 	if (n > index)
 	{
 		for (int i = 0; i < index; i++)
@@ -116,7 +116,7 @@ template<typename T>T* insert(T arr[], int n, const int index, int value)
 
 template<typename T>T* pop_back(T arr[], const int n)
 {
-	int* arr2 = new int[n - 1];
+	T* arr2 = new T[n - 1];
 	for (int i = 0; i < n-1; i++)
 	{
 		arr2[i] = arr[i];
@@ -127,7 +127,7 @@ template<typename T>T* pop_back(T arr[], const int n)
 
 template<typename T>T* pop_front(T arr[], const int n)
 {
-	int* arr2 = new int[n-1];
+	T* arr2 = new T[n-1];
 	for (int i = 1; i < n; i++)
 	{
 		arr2[i-1] = arr[i];
@@ -138,7 +138,7 @@ template<typename T>T* pop_front(T arr[], const int n)
 
 template<typename T>T* erase(T arr[], const int n, int index)
 {
-	int* arr2 = new int[n-1];
+	T* arr2 = new T[n-1];
 	if (n > index)
 	{
 		for (int i = 0; i < index; i++)
