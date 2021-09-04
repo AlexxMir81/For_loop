@@ -29,7 +29,7 @@ void main()
 	//char str[] = { 'H','e','l','l','o', 0};
 	//char str[] = "Hello";
 	//cout << str << endl;
-	const int n = 20;
+	const int n = 256;
 	char str[n];
 	cout << "¬ведите строку: "; 
 	//cin >> str;
@@ -104,7 +104,7 @@ void to_lower(char str[])
 void shrink(char str[])
 {
 	for(int i=0; i<string_length(str); i++)
-		if (str[i] == ' ')
+		while(str[i] == ' '&&str[i+1==' '])
 		{
 			for(int j=i; str[j]!=0; j++)
 			{
