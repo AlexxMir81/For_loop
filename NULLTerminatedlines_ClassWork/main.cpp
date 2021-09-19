@@ -9,6 +9,7 @@ void shrink(char str []);
 void remove_symbol(char str[], char symbol);
 bool is_palindrome(char str[]);
 
+
 void main()
 {
 	SetConsoleCP(1251);
