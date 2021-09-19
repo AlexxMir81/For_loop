@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 int StrLen(char str[]);
@@ -15,12 +15,12 @@ void main()
 	const int n = 18;
 	char str[n];
 	setlocale(LC_ALL, "Russian");
-	cout << "Ââåäèòå MAC - àäðåñ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ MAC - Ð°Ð´Ñ€ÐµÑ: ";
 	cin.getline(str, n);
-	cout << (is_mac_address(str)==true?"Ýòî MAC-àäðåñ!": "Ýòî íå MAC-àäðåñ!") << endl;
-	cout << "Ââåäèòå IP - àäðåñ: ";
+	cout << (is_mac_address(str)==true?"Ð­Ñ‚Ð¾ MAC-Ð°Ð´Ñ€ÐµÑ!": "Ð­Ñ‚Ð¾ Ð½Ðµ MAC-Ð°Ð´Ñ€ÐµÑ!") << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ IP - Ð°Ð´Ñ€ÐµÑ: ";
 	cin.getline(str, n);
-	cout << (is_ip_address(str)==true?"Ýòî IP-àäðåñ!":"Ýòî íå IP-àäðåñ!") << endl;
+	cout << (is_ip_address(str)==true?"Ð­Ñ‚Ð¾ IP-Ð°Ð´Ñ€ÐµÑ!":"Ð­Ñ‚Ð¾ Ð½Ðµ IP-Ð°Ð´Ñ€ÐµÑ!") << endl;
 
 }
 
