@@ -64,11 +64,13 @@ bool is_hex(char str[])
 bool is_mac_address(char str[])
 {
 	if ((str[2] == ':' && str[5] == ':' && str[8] == ':' && str[11] == ':' && str[14] == ':') ||
-		(str[2] == '-' && str[5] == '-' && str[8] == '-' && str[11] == '-' && str[14] == '-'))
+		(str[2] == '-' && str[5] == '-' && str[8] == '-' && str[11] == '-' && str[14] == '-') ||
+		(str[4]=='.'&&str[9]=='.'))
 	{
-		for (int i = 0; str[i]; i++)
-			remove_symbol(str, ':');
+		//for (int i = 0; str[i]; i++)
+		remove_symbol(str, ':');
 		remove_symbol(str, '-');
+		remove_symbol(str, '.');
 		if (is_hex(str)) return true;
 	}
 	else return false;
